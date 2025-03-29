@@ -21,7 +21,7 @@ public class Keys {
     private byte[] key;
     private byte[][] subKeys;
 
-    public void KeyGenerator(byte[] key) {
+    public void keyGenerator(byte[] key) {
         this.key = key;
         generateSubKeys();
     }
