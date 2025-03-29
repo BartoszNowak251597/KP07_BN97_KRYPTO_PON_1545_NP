@@ -3,39 +3,61 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>KryptoZadanie1</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>org.example</groupId>
-    <artifactId>KryptoZadanie1</artifactId>
+    <artifactId>KryptoZadanie1_View</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>Model</module>
-        <module>View</module>
-    </modules>
+    <packaging>jar</packaging>
+
+    <description>Projekt grupy laboratoryjnej JMON_PN_1545_NP_05</description>
+
+    <developers>
+        <developer>
+            <id>251607</id>
+            <name>Kacper Patała</name>
+            <email>251607@edup.lodz.pl</email>
+        </developer>
+        <developer>
+            <id>251597</id>
+            <name>Bartosz Nowak</name>
+            <email>251597@edup.lodz.pl</email>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>23</java.version>
     </properties>
-
     <dependencies>
         <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>12.0.2</version>
+            <groupId>org.example</groupId>
+            <artifactId>KryptoZadanie1_Data_Model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-            <version>23</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.10.3</version>
-            <scope>test</scope>
+            <groupId>org.example</groupId>
+            <artifactId>KryptoZadanie1</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+            <comments>This project is licensed under the MIT license, allowing permissive use,
+                modification, and distribution, including for closed-source projects.</comments>
+        </license>
+    </licenses>
+
     <build>
         <plugins>
             <plugin>
@@ -87,6 +109,12 @@
 <!--                        <artifactId>checkstyle</artifactId>-->
 <!--                        <version>10.14.1</version>-->
 <!--                    </dependency>-->
+<!--                    <dependency>-->
+<!--                        <groupId>com.h2database</groupId>-->
+<!--                        <artifactId>h2</artifactId>-->
+<!--                        <scope>runtime</scope>-->
+<!--                        <version>2.3.232</version>-->
+<!--                    </dependency>-->
 <!--                </dependencies>-->
 <!--            </plugin>-->
             <plugin>
@@ -106,6 +134,18 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>4.0.0-M13</version>
+                <executions>
+                    <execution>
+                        <id>View-Site</id>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site</phase>
+                        <configuration>
+                            <outputDirectory>${project.parent.basedir}/target/site/KryptoZadanie1_View</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

@@ -1,0 +1,56 @@
+1.Funkcja do permutacji
+    a) Argumenty :
+         - wartości bitowa którą permutujemy i to może być block textu połowa klucza
+         - macież na której podstawie przeprowadzamy permutacje
+         - liczba oczekiwanych bitów
+    b) zwraca spermutowany ciąg bitów
+2. funkcja do przesuwania w lewo
+    a) Argumenty
+         - coś co chcemy przesunąć np postać bitowa klucz
+         - o ile przesuwamy
+    b) Zwraca ciąg bitów który został przesunięty
+3. Funkcja XOR
+    a) Argumenty Dwa ciągi bitów które chcemy z ksowrować
+    b) zwracać wartość sksorowaną
+4. Funkcja Klucz
+    a) Zamiana podanego klucza 64 bitowego z HEX na BIN
+           Wywołujemy permutacje na kluczu
+           podajemy PC1 i 56 bo chcemy mieć bez bitów parzystość
+
+5. Funkcja 16klucz
+    a) klucz otrzymany z funkcji "KLUCZ" podany jako argument
+       Dzielimy na dwie połówki na lewą i prawą
+       Zmienne do przechowywania kluczy potrzebne do dalszego działania
+       klucze tworzymy przy użyciu tablicy "przesunięć" i funckji shift(przesuwanie w lewo)
+       potem łączymy ciągi bitowe
+       permutujemy to co otrzymaliśmy z łączenia z wykorzystaniem PC2
+       z tego robi się 48 bitowy klucz co jest zampisywanie do zmiennej
+       i powtarzamy to 16 razy git?
+
+6. Funkcja Enkrypcaj
+    a) podajemy Arg : To co chcemy zaszyfrować w postacie bin
+                - lista kluczy z "16Kluczy"
+    b) Permutacja z wykorzytsaniem macieży IP oraz warością 64 dla tego co chcemy zaszyfrować
+        rozdzielamy wartość na dwie połówki
+    c) w pętli (robi to 16 razy)
+           - najpierw prawą połowe permutujemy z wykorzystanie expandTbl na 48 bitów
+           - XOR dla naszej prawej połówki z odpowiednim kluczem z listy dla odpowiedniego indexu
+           - zmienna do przechowywanie tego co niżej
+           - po obliczniu xora (kolejna pętla 8 razy)
+              >  ustalamy wiersz sBOX po indexach z naszeszych bitów z XOR
+              >  ustalamy kolumne wsm tak samo tylko większej liczbie bitów
+              >  wyciągamy wartość z tych współrzędnych i dodajemy do tej zmineje co wyżej
+           - następnie permutacja tej zmiennej "wiesz o co cho" używając macieży pBlock (16, 7, 20 ,21)
+                ma mieć 32 bity
+           result zmienna result wynik z operacj xor na lewej połówce i spermutowaniej w ostatnim kroku
+           zminnej
+           - ustawiamy że "left" to result
+           - jężeli to nie jest "15" iteracja to Prawa to jest lewa
+                                                 lewa to jest Prawa
+    d) łączymy LEWĄ i PRAWĄ aby byłą wspólnota
+    e) Permutacja wspólnoty z macieżą FP
+        mamy 64 bity zwracamy to
+
+7. Funkcja Dekrypcja
+    Lista odwrucona kluczy 16 i w teori powinno przetłumaczyć spowrotem
+
