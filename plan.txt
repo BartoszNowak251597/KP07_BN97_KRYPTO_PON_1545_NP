@@ -13,7 +13,7 @@
     a) Argumenty Dwa ciągi bitów które chcemy z ksowrować
     b) zwracać wartość sksorowaną
 4. Funkcja Klucz
-    a) Zamiana podanego klucza 64 bitowego z HEX na BIN
+    a) Zamiana podanego klucza 64 bitowego z TEXT na bin
            Wywołujemy permutacje na kluczu
            podajemy PC1 i 56 bo chcemy mieć bez bitów parzystość
 
