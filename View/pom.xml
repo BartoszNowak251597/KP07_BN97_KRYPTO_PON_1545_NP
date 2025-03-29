@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>KryptoZadanie1</artifactId>
+        <artifactId>KryptoZadanie1Project</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -13,7 +13,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <description>Projekt grupy laboratoryjnej JMON_PN_1545_NP_05</description>
+    <description>Projekt grupy laboratoryjnej JM_CZ_1530_06</description>
 
     <developers>
         <developer>
@@ -37,13 +37,13 @@
     <dependencies>
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>KryptoZadanie1_Data_Model</artifactId>
+            <artifactId>GameOfLife_Data_Model</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>KryptoZadanie1</artifactId>
+            <artifactId>GameOflife</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
@@ -65,7 +65,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>org.example.App</mainClass>
+                    <mainClass>org.example.KryptoZadanie1App</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -87,36 +87,36 @@
                     </execution>
                 </executions>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
-<!--                <version>3.3.1</version>-->
-<!--                <configuration>-->
-<!--                    <configLocation>checkstyle2023.xml</configLocation>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>checkstyle</id>-->
-<!--                        <phase>verify</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>check</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <dependencies>-->
-<!--                    <dependency>-->
-<!--                        <groupId>com.puppycrawl.tools</groupId>-->
-<!--                        <artifactId>checkstyle</artifactId>-->
-<!--                        <version>10.14.1</version>-->
-<!--                    </dependency>-->
-<!--                    <dependency>-->
-<!--                        <groupId>com.h2database</groupId>-->
-<!--                        <artifactId>h2</artifactId>-->
-<!--                        <scope>runtime</scope>-->
-<!--                        <version>2.3.232</version>-->
-<!--                    </dependency>-->
-<!--                </dependencies>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <configLocation>checkstyle2023.xml</configLocation>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>checkstyle</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>10.14.1</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.h2database</groupId>
+                        <artifactId>h2</artifactId>
+                        <scope>runtime</scope>
+                        <version>2.3.232</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
